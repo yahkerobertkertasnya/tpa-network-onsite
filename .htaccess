@@ -1,0 +1,7 @@
+DirectoryIndex pages/login.php
+
+Options -Indexes
+
+ErrorDocument 401 "unauthorized"
+ErrorDocument 403 "forbidden"
+ErrorDocument 404 "Not found"
