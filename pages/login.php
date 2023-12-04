@@ -8,21 +8,26 @@
 <body>
 
 <form action="../controller/auth/login.php" method="post">
-        <h2>Login</h2>
-        <?php
-        if (isset($_GET['error'])) {
-            $error = $_GET['error'];
-            echo "<p>Error: $error</p>";
-        }
-        ?>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    <h2>Login</h2>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+    <?php
+    if (isset($_GET['error'])) {
+        $error = $_GET['error'];
+        echo "<p>Error: $error</p>";
+    }
+    ?>
 
-        <button type="submit">Login</button>
-    </form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Login</button>
+
+    <!-- Add a button to redirect to register.php -->
+    <p>Don't have an account? <a href="register.php"><button type="button">Register</button></a></p>
+</form>
 
 </body>
 </html>

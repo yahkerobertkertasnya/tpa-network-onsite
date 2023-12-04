@@ -9,12 +9,14 @@
 
     <form action="../controller/auth/register.php" method="post">
         <h2>Register</h2>
+
         <?php
         if (isset($_GET['error'])) {
             $error = $_GET['error'];
             echo "<p>Error: $error</p>";
         }
         ?>
+
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -22,6 +24,9 @@
         <input type="password" id="password" name="password" required>
 
         <button type="submit">Register</button>
+
+        <!-- Add a button to redirect to login.php -->
+        <p>Already have an account? <a href="login.php"><button type="button">Login</button></a></p>
     </form>
 
 </body>

@@ -2,6 +2,5 @@
 college assignment
 2501969870 Irki Muzak
 
-- create .env based on .env.example
-- docker compose up -d
-- composer require vlucas/phpdotenv
+- run `sudo docker compose up -d`
+- acess localhost:8080/pages/login.php
