@@ -5,20 +5,20 @@ require_once '../controller/books/insert.php';
 
 checkLogin();
 
-// Handle form submission
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get book name from the form
+    
     $bookName = $_POST['book_name'];
 
-    // Insert the new book using the insertBook function
+    
     $inserted = insertBook($pdo, $bookName);
 
     if ($inserted) {
-        // Redirect back to main.php after the book is inserted
+        
         header("Location: main.php");
         exit();
     } else {
-        // Handle the case where the book couldn't be inserted
+        
         echo "Error inserting the book.";
     }
 }

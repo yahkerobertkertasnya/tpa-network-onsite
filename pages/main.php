@@ -2,7 +2,7 @@
 require_once '../controller/auth/middleware.php';
 require_once '../controller/books/get.php';
 
-// Check if the user is logged in
+
 checkLogin();
 
 $loggedInUserId = $_SESSION['user_id'];
@@ -28,7 +28,7 @@ $allBooks = getAllBooks($pdo);
 <a href="insert.php">Insert New Book</a>
 
 <?php
-// Display all books
+
 if (!empty($allBooks)) {
     echo "<h2>All Books:</h2>";
     echo "<ul>";

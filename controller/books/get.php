@@ -12,12 +12,12 @@ function getAllBooks(PDO $pdo) {
         $statement = $pdo->prepare($query);
         $statement->execute();
 
-        // Fetch all rows as an associative array
+        
         $books = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $books;
     } catch (PDOException $e) {
-        // Handle the exception as needed (log, display an error message, etc.)
+        
         die("Error fetching books: " . $e->getMessage());
     }
 }
@@ -30,7 +30,7 @@ function getBookById(PDO $pdo, $bookId) {
 
       return $statement->fetch(PDO::FETCH_ASSOC);
   } catch (PDOException $e) {
-      // Handle the exception as needed (log, display an error message, etc.)
+      
       die("Error getting book by ID: " . $e->getMessage());
   }
 }

@@ -14,10 +14,10 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Check if the "users" table exists
+    
     $checkTable = $pdo->query("SHOW TABLES LIKE 'users'");
     if ($checkTable->rowCount() == 0) {
-        // Create the "users" table if it doesn't exist
+        
         $createTableQuery = "
             CREATE TABLE users (
                 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -28,10 +28,10 @@ try {
         $pdo->exec($createTableQuery);
     }
     
-    // Check if the "users" table exists
+    
     $checkTable = $pdo->query("SHOW TABLES LIKE 'books'");
     if ($checkTable->rowCount() == 0) {
-        // Create the "users" table if it doesn't exist
+        
         $createTableQuery = "
             CREATE TABLE books (
                 id INT AUTO_INCREMENT PRIMARY KEY,
