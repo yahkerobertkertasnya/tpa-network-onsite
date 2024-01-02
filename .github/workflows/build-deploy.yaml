@@ -3,7 +3,7 @@ name: Build Images and Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   NEXUS_URL: ${{secrets.NEXUS_URL}}
@@ -40,3 +40,10 @@ jobs:
           echo "${{ env.KUBE_CONFIG_DATA }}" > kubeconfig.yaml
           kubectl --kubeconfig=kubeconfig.yaml rollout restart deployment yuri-deployment
           rm kubeconfig.yaml
+
+
+
+# nexus url: 10.100.140.1:5000
+# nexus-username: hoyomi
+# nexus-password: hoyomuwujak
+# kube-config-data
