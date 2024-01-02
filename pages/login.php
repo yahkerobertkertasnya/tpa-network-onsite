@@ -8,7 +8,7 @@
 <body>
 
 <form action="../controller/auth/login.php" method="post">
-    <h2>Login</h2>
+    <h2>Login NOBOL</h2>
 
     <?php
     if (isset($_GET['error'])) {
